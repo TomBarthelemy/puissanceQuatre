@@ -1,0 +1,32 @@
+
+<h1>Puissance 4</h1>
+
+<button class="new-game" (click)="newGame()">Start new Game</button>
+
+<h2 *ngIf="winner == null">
+    C'est au tour de : <app-pion class="currentPlayer" [value]="player"></app-pion>
+</h2>
+
+<h2 *ngIf="winner != null">
+    Player <app-pion class="currentPlayer" [value]="winner"></app-pion> won the game !
+</h2>
+
+<main>
+    <div>
+        <button class="selection" [disabled]="winner != null"
+            *ngFor="let val of columns"
+            [ngClass]="player"
+            (click)="makeMove(val)">
+        </button>
+    </div>
+
+    <div class="board">
+        <div class="pied-plateau pied-gauche"></div>
+        <div class="pied-plateau pied-droit"></div>
+        <app-pion 
+        *ngFor="let val of pions; let i = index"
+        [value]="val" id="{{ 'pion-' + i }}">
+        </app-pion>
+    </div>
+
+</main>

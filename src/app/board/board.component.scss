@@ -1,0 +1,124 @@
+h1 {
+    font-size: 4.9vw;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 3.0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.new-game {
+    font-size: 3.0vh;
+    height: auto;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+div {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-gap: 0px;
+}
+
+
+.selection {
+    width: 65px;
+    height: 65px;
+    font-size: 4em !important;
+    border-radius: 50%;
+    margin: 20px 20px 25px 20px;
+}
+
+.board{
+    position: relative;
+}
+
+.pied-plateau{
+    height: 140px;
+    width: 10px;
+    border: 2px cadetblue solid;
+    background-color: #3880ff;
+    bottom: -10%;
+    position: absolute;
+}
+
+.pied-gauche{
+    position:absolute;
+    left: 0px;
+}
+
+.pied-droit{
+    position:absolute;
+    right: 0px;
+}
+
+.pied-plateau:before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #4c8dff;
+    position: absolute;
+    bottom: -5px;
+    right: -45px;
+  }
+
+.pied-plateau:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 45px solid #3880ff;
+    position: absolute;
+    bottom: -3px;
+    right: -40px;
+  }
+
+
+.red:hover{
+    background-color: #eb445a;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.yellow:hover{
+    background-color: #ffc409;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+app-pion {
+    border: 1px #4c8dff solid;
+    height: 100px;
+    background-color: #3880ff;
+}
+
+.currentPlayer{
+    height: 85px;
+    width: 85px;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+@keyframes bounce{
+    from { transform: translate3d(0, -5px, 0) scale(1.1);}
+    to { transform: translate3d(0, 10px, 0) scale(1.15);}
+}
+
+
+
+
