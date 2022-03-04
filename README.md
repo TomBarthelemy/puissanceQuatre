@@ -1,3 +1,6 @@
+# Hosted on firebase
+https://puissance-4-ddded.web.app/
+
 # PuissanceQuatre
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
